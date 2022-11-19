@@ -1,0 +1,23 @@
+p {
+    text-align: center;
+}
+
+.intro {
+    font-weight: 600;
+}
+
+.center {
+    background-color: lightgray;
+    outline: 0ch;
+    outline-style: round;
+    border-radius: 20px;
+    max-height: 600px;
+    height: fit-content;
+    width: fit-content;
+    padding-left: 0%;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+

@@ -9,7 +9,7 @@ export default function Navbar(){
                 <Link className="nav-link" to="/">
                     <div className='logo'>
                         <a href='/'>
-                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMJIi61ap-084bRbgHTgRIxAahjoHVDieeafHDzSpR&s' className='cytonn_logo'/>
+                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMJIi61ap-084bRbgHTgRIxAahjoHVDieeafHDzSpR&s' className='cytonn_logo' alt="cytonn-logo"/>
                         </a>
                     </div>
                 </Link>
