@@ -1,0 +1,10 @@
+.navbar {
+    background-color: darkgray;
+    height: 40px !important;
+    max-height: 100px !important;
+  }
+
+.nav-link {
+    color: rgb(28, 25, 25);
+    font-weight: 600;
+  }
