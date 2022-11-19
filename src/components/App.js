@@ -13,12 +13,6 @@ export default function App() {
         <Navbar/>
       </div>
 
-      {/* <div className='logo'>
-        <a href='/'>
-          <img src='/assets/img/logos/cytonn_logo.svg' className='cytonn_logo'/>
-        </a>
-      </div> */}
-
       <Routes>
         <Route exact path='/' element={<Home/>}></Route>
         <Route exact path='/graph' element={<Graph/>}></Route>
