@@ -17,16 +17,15 @@ export default function Table(){
         };
         
         fetch('https://covid-193.p.rapidapi.com/statistics', options)
-                .then(response => response.json())
-                .then(entries => setEntries(entries.response))
-                .catch(err => console.error(err));
-        }
+            .then(response => response.json())
+            .then(response => setEntries(response.response))
+            .catch(err => console.error(err));
+    }
+        
 
     useEffect(
         statisticsFetcher, []
     )
-
-    // console.log(entries)
 
     //search bar
     const handleChange = (e) => {
@@ -64,7 +63,7 @@ export default function Table(){
                             </tr>
                         </thead>
 
-                        <tbody>
+                        {/* <tbody>
                             {entries.map(entry => {
                                 return(
                                     <tr key={entry.country}>
@@ -74,7 +73,7 @@ export default function Table(){
                                         <td>{entry.tests.total}</td>
                                     </tr> 
                             )})}
-                        </tbody>
+                        </tbody> */}
                     </table>
                 </div>
             </center>
