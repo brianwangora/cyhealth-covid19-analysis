@@ -8,9 +8,7 @@ export default function Navbar(){
             <div className="container-fluid">
                 <Link className="nav-link" to="/">
                     <div className='logo'>
-                        <a href='/'>
-                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMJIi61ap-084bRbgHTgRIxAahjoHVDieeafHDzSpR&s' className='cytonn_logo' alt="cytonn-logo"/>
-                        </a>
+                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMJIi61ap-084bRbgHTgRIxAahjoHVDieeafHDzSpR&s' className='cytonn_logo' alt="cytonn-logo"/>
                     </div>
                 </Link>
                 <Link className="nav-link" to="/">HOME</Link>
