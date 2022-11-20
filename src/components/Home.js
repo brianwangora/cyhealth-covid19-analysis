@@ -10,9 +10,10 @@ export default function Home(){
                 <p>This system is required by Cyhealth's insurance partner for research purposes.</p>
                 <p>This is system comprises of two analyses;</p>
                 <ul>
-                    <li>A statistics table displaying Covid-19 statistics by country</li>
                     <li>An hourly graph showing Covid-19 history</li>
+                    <li>A statistics table displaying Covid-19 statistics by country</li>
                 </ul>
+                <p>Follow the links above to get the results of the analysis.</p>
             </div>
         </div>
     )

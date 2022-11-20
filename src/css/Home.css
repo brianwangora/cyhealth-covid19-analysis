@@ -16,7 +16,7 @@ p {
     width: fit-content;
     padding-left: 0%;
     position: fixed;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
