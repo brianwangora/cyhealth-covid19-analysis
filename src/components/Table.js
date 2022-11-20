@@ -1,14 +1,11 @@
-import React, { useEffect, useState} from "react";
-import { useParams } from "react-router-dom";
+import React, {useEffect, useState} from "react";
 import '../css/Table.css';
 
+
 export default function Table(){
-    const [country, setCountry] = useState("")
-    const [cases, setCases] = useState("")
-    const [deaths, setDeaths] = useState("")
-    const [tests, setTests] = useState("")
+    const[entries, setEntries]= useState("")
 
-
+    //fetch from API
     const options = {
         method: 'GET',
         headers: {
@@ -20,12 +17,7 @@ export default function Table(){
     const statisticsFetcher = () => {
         fetch('https://covid-193.p.rapidapi.com/statistics', options)
             .then(response => response.json())
-            .then(response => {
-                setCountry(response.country)
-                setCases(response.cases)
-                setDeaths(response.deaths)
-                setTests(response.tests)
-            })
+            .then(response => setEntries(response.response))
             .catch(err => console.error(err));
         }
 
@@ -33,19 +25,31 @@ export default function Table(){
             statisticsFetcher, []
         )
 
+
     return(
         <div className="container">
             <center>
                 <h1>This is a Table</h1>
-                <table>
-                    <tr>
-                        <th>Countries</th>
-                        <th>Total Cases</th>
-                        <th>Total Deaths</th>
-                        <th>Total Tests</th>
-                    </tr>
-                    
-                </table>
+                <div className="table">
+                    <table>
+                            <tr>
+                                <th>Countries</th>
+                                <th>Total Cases</th>
+                                <th>Total Deaths</th>
+                                <th>Total Tests</th>
+                            </tr>
+                            {entries.map((val, key) => {
+                                return (
+                                    <tr key={key}>
+                                        <td>{val.country}</td>
+                                        <td>{val.cases.total}</td>
+                                        <td>{val.deaths.total}</td>
+                                        <td>{val.tests.total}</td>
+                                    </tr>
+                                )
+                            })}
+                        </table>
+                </div>
             </center>
         </div>
     )
